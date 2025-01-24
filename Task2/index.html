@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head> 
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is a sample webpage for task 2 in learning HTML and JavaScript.">
-    
     <title>Task 2</title>
-
 </head>
 
 <body>
 
+    <!-- Button that triggers the event -->
     <button id="clickButton">Click me</button>
 
     <script>
+        // Wait for the DOM to fully load
+        document.addEventListener('DOMContentLoaded', function() {
 
-        // Function to handle the button click
-        function handleClick() 
-        {
-            console.log("Hello World");
-        }
+            // Function to handle the button click
+            function handleClick() {
+                console.log("Hello World"); // Log to the console
+                alert("Hello World"); // Show alert to the user
+            }
 
-        // Get button by ID and add event listener
-        const button = document.getElementById('clickButton');
-        button.addEventListener('click', handleClick);
-    
+            // Get the button element by its ID and add event listener
+            const button = document.getElementById('clickButton');
+            button.addEventListener('click', handleClick);
+        });
     </script>
 
 </body>
